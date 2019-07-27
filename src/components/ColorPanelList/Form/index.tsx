@@ -27,7 +27,7 @@ const Form: React.FC<FormProps> = props => {
   );
   const submit = React.useCallback(() => {
     props.handleSubmit({ id: props.itemCount, label, colorCode });
-  }, [label, colorCode]);
+  }, [props.itemCount, label, colorCode]);
 
   const fetchData = React.useCallback(() => {
     props.handleFetchData();

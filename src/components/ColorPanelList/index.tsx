@@ -12,7 +12,7 @@ const ColorPanelList: React.FC<ColorPanelListProps> = props => {
     <div>
       <Form
         handleSubmit={props.add}
-        handleFetchData={props.fetch}
+        handleFetchData={() => {}}
         itemCount={props.items.length}
       />
       <ul>
