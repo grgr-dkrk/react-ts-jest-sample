@@ -1,19 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ColorPanelListのReducer addAction 1`] = `
-Object {
-  "items": Array [
-    Object {
-      "colorCode": "#000",
-      "id": 10,
-      "label": "漆黒の黒",
-    },
-  ],
-}
+exports[`ColorPanelListのReducer add snapShot 1`] = `
+Array [
+  Object {
+    "colorCode": "#000",
+    "id": 0,
+    "label": "漆黒の黒",
+  },
+]
 `;
 
-exports[`ColorPanelListのReducer removeAction 1`] = `
-Object {
-  "items": Array [],
-}
-`;
+exports[`ColorPanelListのReducer remove snapShot 1`] = `Array []`;
+
+exports[`ColorPanelListのReducer 対象外のAction snapShot 1`] = `Array []`;

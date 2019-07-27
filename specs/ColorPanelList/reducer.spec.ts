@@ -22,6 +22,9 @@ describe('ColorPanelListのReducer', () => {
     it('colorCode', () => {
       expect(state.items[0].colorCode).toBe('#000');
     });
+    it('snapShot', () => {
+      expect(state.items).toMatchSnapshot();
+    });
   });
 
   // remove
@@ -32,6 +35,10 @@ describe('ColorPanelListのReducer', () => {
       let newState = reducer(state, removeColorPanel(10));
       expect(newState.items).toHaveLength(0);
     });
+    it('snapShot', () => {
+      let newState = reducer(state, removeColorPanel(10));
+      expect(newState.items).toMatchSnapshot();
+    });
   });
 
   // default
@@ -41,6 +48,9 @@ describe('ColorPanelListのReducer', () => {
     state = reducer(undefined, {});
     it('initialStateが返る', () => {
       expect(state).toEqual(initialState);
+    });
+    it('snapShot', () => {
+      expect(state.items).toMatchSnapshot();
     });
   });
 });
